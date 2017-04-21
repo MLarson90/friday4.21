@@ -5,21 +5,21 @@
       <link rel="stylesheet" href="build/css/styles.css">
       <script src="build/js/vendor.min.js"></script>
       <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Wake Up</title>
+    <title>Doctors</title>
   </head>
   <body>
     <div class="container">
-     <label for="condition">Enter a condition:</label>
-     <input id="condition" type="text">
-     <button class="btn-warning" id="submit">Find Doctors</button>
-     <div class="showWeather"></div>
-     <p id ="feh"></p><p id="cel"></p>
-       <button id="switchTemps" type="button">°C / °F</button>
-       <form id="alarm">
-         Select a time to check the weather again:
-         <input id="new-time" type="time" name="usr_time">
-         <button type="submit" class="btn-danger">Set alarm</button>
-       </form>
+      <form id="userInput">
+       <label for="condition">Enter a condition:</label>
+       <input id="condition" type="text">
+       <label for="location">Enter a state-city:</label>
+       <input id="location" type="text">
+       <button class="btn-warning" id="submit">Find Doctors</button>
+     </form>
+     <div class="doctors">
+       <ul id='listOfDoc'>
+       </ul>
+      <div>
     </div>
   </body>
 </html>

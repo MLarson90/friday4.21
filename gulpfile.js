@@ -42,6 +42,10 @@ gulp.task("minifyScripts", ["jsBrowserify"], function (){
   .pipe(gulp.dest("./build/js"));
 });
 
+gulp.task("clean", function(){
+  return del(['build', 'tmp']);
+});
+
 gulp.task("build", ['clean'], function(){
   if(buildProduction){
     gulp.start('minifyScripts');
@@ -50,10 +54,6 @@ gulp.task("build", ['clean'], function(){
   }
   gulp.start('bower');
   gulp.start('cssBuild');
-});
-
-gulp.task("clean", function(){
-  return del(['build', 'tmp']);
 });
 
 gulp.task('jshint', function(){
