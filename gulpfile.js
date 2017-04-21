@@ -36,7 +36,7 @@ gulp.task('jsBrowserify', ['concatInterface'], function(){
 });
 
 
-gulp.task("minifyScripts", ["jsBrowserify"], function (){
+gulp.task('minifyScripts', ['jsBrowserify'], function (){
   return gulp.src("./build/js/app.js")
   .pipe(uglify())
   .pipe(gulp.dest("./build/js"));
@@ -87,7 +87,7 @@ gulp.task('serve', function() {
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
-  gulp.watch("scss/*.scss", ['cssBuild']);
+  gulp.watch(["scss/*.scss"], ['cssBuild']);
 });
 
 gulp.task('htmlBuild', function() {
