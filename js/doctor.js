@@ -5,7 +5,7 @@ function Doctor(first, last, img , bio, city, state, street, street2){
  this.last =last;
  this.img = img;
  this.bio = bio;
- this.city= city;
+ this.city = city;
  this.state = state;
  this.street = street;
  this.street2 = street2;
