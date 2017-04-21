@@ -1,8 +1,8 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 var apiKey = require('./../.env').apiKey;
 
-var displayDoc = function(doctorName){
-  $('#listOfDoc').append("<li>" + doctorName + "</li>");
+var displayDoc = function(doc){
+  $('.doctors').append("<ul>" + "<li id='name'>" + doc.first + " " + doc.last + "</li>" + "<li> <img src='" + doc.img + "'></li>" + "<li>" + doc.bio + "</li>" + "<li id='street'>" + doc.street + "</li>" + "<li>" + doc.city + ", " + doc.state + "</li>" + "</ul>");
 };
 
 $(document).ready(function(){
@@ -12,6 +12,5 @@ $(document).ready(function(){
     var location = $("#location").val();
     newDoc = new Doctor(condition);
     newDoc.findDocByCondition(condition, location, displayDoc);
-    $(".doctors").text("Doctors in your area are... ");
   });
 });
