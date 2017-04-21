@@ -22,7 +22,6 @@ Doctor.prototype.findDocByCondition = function(condition, location, displayDoc){
          doctor.street = response.data[i].practices[0].visit_address.street;
 
      }
-
         displayDoc(doctor);
      }
    });
